@@ -47,7 +47,7 @@ def ASKSR(data,rfArray):
 if __name__ == '__main__':
 
 	A = {}
-	d = pd.read_csv('../data/output_monthly_with_rf.csv')
+	d = pd.read_csv('../data/output_weekly_with_rf.csv')
 	rf = d["Rf"].tolist()
 	# print(rf)
 	for key in d:
@@ -62,7 +62,6 @@ if __name__ == '__main__':
 	print("|Rank|Name|ASKSR-Value|")
 	print("| ------------- | ------------- |------------- | ")
 	for i in sorted_x:
-		if i[0] == "Rf":
-			pass
-		print("| {}  | {}  | {}  |".format(indexr,i[0],i[1]))
-		indexr += 1
+		if i[0] != "Rf":
+			print("| {}  | {}  | {}  |".format(indexr,i[0],i[1]))
+			indexr += 1
