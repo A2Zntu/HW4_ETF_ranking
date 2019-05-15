@@ -1,23 +1,28 @@
 import math
 import statistics
+import pandas as pd
 import random
 from scipy.stats import kurtosis
 from scipy.stats import skew
+import csv
 
 n = 100
 
-data = [1, 2, 3, 4, 5, float('nan')]
 
 # usage : 
 # 	data ( List of number )
 # 	rfArray ( List of number )
 def ASKSR(data,rfArray):
+	
 
 	lamda = 1 # absolute risk aversion, doesn't matter in this case
+	rfArray = [x for x in rfArray if str(x) != 'nan']
+
 	rf = sum(rfArray)
 
 
 	cleanedList = [x for x in data if str(x) != 'nan']
+
 
 	Dvar = statistics.stdev(cleanedList) ** 0.5
 	Dmean = statistics.mean(cleanedList)
@@ -37,3 +42,26 @@ def ASKSR(data,rfArray):
 
 	return abs(ASKSR)
 
+
+
+if __name__ == '__main__':
+
+	A = {}
+	d = pd.read_csv('../data/output_weekly_with_rf.csv')
+	rf = d["Rf"].tolist()
+	# print(rf)
+	for key in d:
+		if key == "Date":
+			pass
+		else:
+			A[key] = ASKSR(d[key].tolist(),rf)
+
+	sorted_x = sorted(A.items(), key=lambda kv: kv[1])
+	sorted_x.reverse()
+	indexr = 1
+	print("|Rank|Name|Value|")
+	for i in sorted_x:
+		if i[0] == "Rf":
+			pass
+		print("|{}|{}|{}|".format(indexr,i[0],i[1]))
+		indexr += 1
