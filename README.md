@@ -2,7 +2,7 @@
 
 ## Description 
 
-|  ETF  | Sharp-Omega  | ASKSR-Value | Riskiness    |
+|  ETF  | Sharpe-Omega  | ASKSR-Value | Riskiness    |
 | ------------- | ------------- |------------- |------------- | 
 | ETF1  | 1  | 3  | 3  | 
 | ETF2  | 2  | 2  | 1  | 
@@ -13,7 +13,7 @@ Moreover, if the correlation is above 0.7, we then use data by weekly.
 
 ## The Indicators Rank of ETFs in weekly frequency
 
-| ETF  | Sharp-Omega | S_Rank | ASKSR-Value | A_Rank | Riskiness   | R_Rank |
+| ETF  | Sharpe-Omega | S_Rank | ASKSR-Value | A_Rank | Riskiness   | R_Rank |
 |------|-------------|--------|-------------|--------|-------------|--------|
 | FPA  | 0.908515    | 29     | 28.1090246  | 25     | -           | -      |
 | FPXI | 1.227656    | 3      | 24.74757981 | 27     | 1.48E-06    | 1      |
@@ -49,7 +49,7 @@ Moreover, if the correlation is above 0.7, we then use data by weekly.
 ## The Indicators Rank of ETFs in monthly frequency
 
 
-| ETF  | Sharp-Omega | S_Rank | ASKSR-Value | A_Rank | Riskiness   | R_Rank |
+| ETF  | Sharpe-Omega | S_Rank | ASKSR-Value | A_Rank | Riskiness   | R_Rank |
 |------|-------------|--------|-------------|--------|-------------|--------|
 | FPA  | 1.191266    | 29     | 18.74949311 | 12     | 0.0119976   | 28     |
 | FPXI | 1.680224    | 6      | 18.52673767 | 14     | 2.20E-05    | 17     |
@@ -83,13 +83,14 @@ Moreover, if the correlation is above 0.7, we then use data by weekly.
 
 ## Rank Correlation 
 
+# Correlation between monthly and weekly rankings.
 We have the Spearman rank correlation and Kendall rank correlation
 We test the weekly rank and monthly rank of ETFs, in order to validate the stability of indicators
 
-footnote: Some ETFs Riskiness are not able to caculated by solver, therefore we choose to ignore the nan value of these.  
+footnote: Some ETFs Riskiness are not able to caculated by solver(expected excess return is negative), therefore we choose to ignore the nan value of these.  
 
 
-| Indicators | Riskness      | Sharp-Omega    | ASKSR |  
+| Indicators | Riskness      | Sharpe-Omega    | ASKSR |  
 | ------------- | ------------- |------------- |------------- | 
 |Spearman | 0.1575 | 0.5227  | 0.2448  | 
 |Kandall  | 0.1168  | 0.3940  | 0.1626  | 
@@ -97,17 +98,24 @@ footnote: Some ETFs Riskiness are not able to caculated by solver, therefore we 
 We strongly believe that the indicators performance rankings are quite different in weekly frequency and monthly frequency.  
 Following the statemtent of Prof. Shih, we suggest to use monthly frequency because all the correlation are not above 0.7.  
 
-Both spearman and kandall indicate that the Sharp-omage has highest validity than others. 
+Both spearman and kandall indicate that the Sharpe-omega has highest validity than others. 
 
 
-| Spearman_weekly | Sharp-Omega | ASKSR | Riskiness |
+# Correlation among different risk indicators
+Here we compare the rankings of different risk indicators. Again, we apply both Spearman and Kendall rank correlation on the monthly and weekly data.
+
+* Among all of the combinations, we can see that Sharpe-Omega and Riskiness pair shows higher correlation than other combinations in three tables. Although it is not the highest in the monthly Spearman correlation matrix, the correlation is still not low.
+* The Sharpe-Omega and Riskiness pair shows higher correlation in weekly data than in monthly data.
+* The ASKSR and Riskiness pair shows significantly higher correlation in monthly data than in weekly data.
+* The Sharpe-Omega and ASKSR pair shows negative correlation in weekly data, while positive in monthly data.
+| Spearman_weekly | Sharpe-Omega | ASKSR | Riskiness |
 |-----------------|-------------|-------|-----------|
 | Sharp-Omega     | 1           | 　    | 　        |
 | ASKSR           | -0.152      | 1     | 　        |
 | Riskiness       | 0.724       | 0.101 | 1         |
 
 
-| Kendalltau_weekly | Sharp-Omega | ASKSR | Riskiness |
+| Kendall_weekly | Sharp-Omega | ASKSR | Riskiness |
 |-------------------|-------------|-------|-----------|
 | Sharp-Omega       | 1           | 　    | 　        |
 | ASKSR             | -0.145      | 1     | 　        |
@@ -121,7 +129,7 @@ Both spearman and kandall indicate that the Sharp-omage has highest validity tha
 | Riskiness        | 0.618       | 0.630 | 1         |
 
 
-| Kendalltau_monthly | Sharp-Omega | ASKSR | Riskiness |
+| Kendall_monthly | Sharp-Omega | ASKSR | Riskiness |
 |--------------------|-------------|-------|-----------|
 | Sharp-Omega        | 1           | 　    | 　        |
 | ASKSR              | 0.138       | 1     | 　        |
