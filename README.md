@@ -93,12 +93,12 @@ footnote: Some ETFs Riskiness are not able to caculated by solver(expected exces
 | Indicators | Riskness      | Sharpe-Omega    | ASKSR |  
 | ------------- | ------------- |------------- |------------- | 
 |Spearman | 0.1575 | 0.5227  | 0.2448  | 
-|Kandall  | 0.1168  | 0.3940  | 0.1626  | 
+|Kendall  | 0.1168  | 0.3940  | 0.1626  | 
 
 We strongly believe that the indicators performance rankings are quite different in weekly frequency and monthly frequency.  
 Following the statemtent of Prof. Shih, we suggest to use monthly frequency because all the correlation are not above 0.7.  
 
-Both spearman and kandall indicate that the Sharpe-omega has highest validity than others. 
+Both spearman and kendall indicate that the Sharpe-omega has highest validity than others. 
 
 
 ### Correlation among different risk indicators
