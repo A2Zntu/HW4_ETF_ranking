@@ -98,3 +98,10 @@ We strongly believe that the indicators performance rankings are quite different
 Following the statemtent of Prof. Shih, we suggest to use monthly frequency because all the correlation are not above 0.7.  
 
 Both spearman and kandall indicate that the Sharp-omage has highest validity than others. 
+
+
+| Spearman_weekly | Sharp-Omega | ASKSR | Riskiness |
+|-----------------|-------------|-------|-----------|
+| Sharp-Omega     | 1           | 　    | 　        |
+| ASKSR           | -0.152      | 1     | 　        |
+| Riskiness       | 0.724       | 0.101 | 1         |
