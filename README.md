@@ -108,6 +108,8 @@ Here we compare the rankings of different risk indicators. Again, we apply both 
 * The Sharpe-Omega and Riskiness pair shows higher correlation in weekly data than in monthly data.
 * The ASKSR and Riskiness pair shows significantly higher correlation in monthly data than in weekly data.
 * The Sharpe-Omega and ASKSR pair shows negative correlation in weekly data, while positive in monthly data.
+
+
 | Spearman_weekly | Sharpe-Omega | ASKSR | Riskiness |
 |-----------------|-------------|-------|-----------|
 | Sharp-Omega     | 1           | 　    | 　        |
@@ -115,21 +117,21 @@ Here we compare the rankings of different risk indicators. Again, we apply both 
 | Riskiness       | 0.724       | 0.101 | 1         |
 
 
-| Kendall_weekly | Sharp-Omega | ASKSR | Riskiness |
+| Kendall_weekly | Sharpe-Omega | ASKSR | Riskiness |
 |-------------------|-------------|-------|-----------|
 | Sharp-Omega       | 1           | 　    | 　        |
 | ASKSR             | -0.145      | 1     | 　        |
 | Riskiness         | 0.556       | 0.060 | 1         |
 
 
-| Spearman_monthly | Sharp-Omega | ASKSR | Riskiness |
+| Spearman_monthly | Sharpe-Omega | ASKSR | Riskiness |
 |------------------|-------------|-------|-----------|
 | Sharp-Omega      | 1           | 　    | 　        |
 | ASKSR            | 0.243       | 1     | 　        |
 | Riskiness        | 0.618       | 0.630 | 1         |
 
 
-| Kendall_monthly | Sharp-Omega | ASKSR | Riskiness |
+| Kendall_monthly | Sharpe-Omega | ASKSR | Riskiness |
 |--------------------|-------------|-------|-----------|
 | Sharp-Omega        | 1           | 　    | 　        |
 | ASKSR              | 0.138       | 1     | 　        |
