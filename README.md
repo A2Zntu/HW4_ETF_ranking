@@ -105,3 +105,24 @@ Both spearman and kandall indicate that the Sharp-omage has highest validity tha
 | Sharp-Omega     | 1           | 　    | 　        |
 | ASKSR           | -0.152      | 1     | 　        |
 | Riskiness       | 0.724       | 0.101 | 1         |
+
+
+| Kendalltau_weekly | Sharp-Omega | ASKSR | Riskiness |
+|-------------------|-------------|-------|-----------|
+| Sharp-Omega       | 1           | 　    | 　        |
+| ASKSR             | -0.145      | 1     | 　        |
+| Riskiness         | 0.556       | 0.060 | 1         |
+
+
+| Spearman_monthly | Sharp-Omega | ASKSR | Riskiness |
+|------------------|-------------|-------|-----------|
+| Sharp-Omega      | 1           | 　    | 　        |
+| ASKSR            | 0.243       | 1     | 　        |
+| Riskiness        | 0.618       | 0.630 | 1         |
+
+
+| Kendalltau_monthly | Sharp-Omega | ASKSR | Riskiness |
+|--------------------|-------------|-------|-----------|
+| Sharp-Omega        | 1           | 　    | 　        |
+| ASKSR              | 0.138       | 1     | 　        |
+| Riskiness          | 0.453       | 0.448 | 1         |
