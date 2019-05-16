@@ -83,7 +83,7 @@ Moreover, if the correlation is above 0.7, we then use data by weekly.
 
 ## Rank Correlation 
 
-# Correlation between monthly and weekly rankings.
+### Correlation between monthly and weekly rankings.
 We have the Spearman rank correlation and Kendall rank correlation
 We test the weekly rank and monthly rank of ETFs, in order to validate the stability of indicators
 
@@ -101,7 +101,7 @@ Following the statemtent of Prof. Shih, we suggest to use monthly frequency beca
 Both spearman and kandall indicate that the Sharpe-omega has highest validity than others. 
 
 
-# Correlation among different risk indicators
+### Correlation among different risk indicators
 Here we compare the rankings of different risk indicators. Again, we apply both Spearman and Kendall rank correlation on the monthly and weekly data.
 
 * Among all of the combinations, we can see that Sharpe-Omega and Riskiness pair shows higher correlation than other combinations in three tables. Although it is not the highest in the monthly Spearman correlation matrix, the correlation is still not low.
