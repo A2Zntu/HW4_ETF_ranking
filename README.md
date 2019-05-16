@@ -98,3 +98,5 @@ footnote: Some ETFs Riskiness are not able to caculated by solver, therefore we 
 
 We strongly believe that the indicators performance rankings are quite different in weekly frequency and monthly frequency.  
 Following the statemtent of Prof. Shih, we suggest to use monthly frequency because all the correlation are not above 0.7.  
+
+Both spearman and kandall indicate that the Sharp-omage has highest validity than others. 
